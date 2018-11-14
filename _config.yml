@@ -31,7 +31,7 @@ skip_render:
 
 # Writing
 new_post_name: :title.md # File name of new posts
-default_layout: post
+default_layout: page
 titlecase: false # Transform title into titlecase
 external_link: true # Open external links in new tab
 filename_case: 0
@@ -80,6 +80,3 @@ theme: default
 ## Docs: https://hexo.io/docs/deployment.html
 deploy:
   type:
-
-# include:
-#   - _redirects

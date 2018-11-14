@@ -6,8 +6,9 @@ media_folder: "source/images"
 public_folder: "/images"
 
 collections:
+
   - name: "posts"
-    label: "Post"
+    label: "Posts"
     folder: "source/_posts"
     create: true
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
@@ -16,4 +17,23 @@ collections:
       - {label: "Title", name: "title", widget: "string"}
       - {label: "Publish Date", name: "date", widget: "datetime"}
       - {label: "Featured Image", name: "thumbnail", widget: "image"}
+      - {label: "Language", name: "language", widget: "select", options: ["en", "fr"]}
       - {label: "Body", name: "body", widget: "markdown"}
+
+  - name: "pages"
+    label: "Pages"
+    files:
+
+      - label: "About Page"
+        name: "about"
+        file: "source/about/index.md"
+        fields:
+          - {label: Title, name: title, widget: string}
+          - {label: Intro, name: intro, widget: markdown}
+          - label: Team
+            name: team
+            widget: list
+            fields:
+              - {label: Name, name: name, widget: string}
+              - {label: Position, name: position, widget: string}
+              - {label: Photo, name: photo, widget: image}
