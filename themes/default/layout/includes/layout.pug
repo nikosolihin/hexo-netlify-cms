@@ -17,6 +17,7 @@ html(lang=config.language)
       each url in theme.stylesheets
         link(rel='stylesheet', href=url)
     link(rel="icon", href=config.root + 'img/favicon.png')
+    script(src='https://identity.netlify.com/v1/netlify-identity-widget.js')
   body
     #menu-outer
       nav#menu-inner
@@ -42,3 +43,13 @@ html(lang=config.language)
       //- scripts list from config.yml
       each url in theme.scripts
         script(src=url)
+        script.
+          if (window.netlifyIdentity) {
+            window.netlifyIdentity.on("init", user => {
+              if (!user) {
+                window.netlifyIdentity.on("login", () => {
+                  document.location.href = "/admin/";
+                });
+              }
+            });
+          }
