@@ -2,34 +2,39 @@ backend:
   name: git-gateway
   branch: master
 
-media_folder: "source/images"
-public_folder: "/images"
+display_url: https://your-site.com
+logo_url: https://your-site.com/images/logo.svg
+media_folder: 'source/images'
+public_folder: '/images'
 
 collections:
-
-  - name: "posts"
-    label: "Posts"
-    folder: "source/_posts"
+  - name: 'posts'
+    label: 'Posts'
+    label_singular: 'Post'
+    description: The description is a great place for tone setting, high level information, and editing guidelines that are specific to a collection.
+    folder: 'source/_posts'
+    editor:
+      preview: false
     create: true
-    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    slug: '{{year}}-{{month}}-{{day}}-{{slug}}'
     fields:
-      - {label: "Layout", name: "layout", widget: "hidden", default: "blog"}
-      - {label: "Title", name: "title", widget: "string"}
-      - {label: "Publish Date", name: "date", widget: "datetime"}
-      - {label: "Featured Image", name: "thumbnail", widget: "image"}
-      - {label: "Language", name: "language", widget: "select", options: ["en", "fr"]}
-      - {label: "Body", name: "body", widget: "markdown"}
+      - {label: 'Title', name: 'title', widget: 'string'}
+      - {label: 'Publish Date', name: 'date', widget: 'datetime'}
+      - {label: 'Cover Image', name: 'image', widget: 'image', required: false}
+      - {label: 'Language', name: 'language', widget: 'select', options: ['en', 'fr']}
+      - {label: 'Body', name: 'body', widget: 'markdown'}
 
-  - name: "pages"
-    label: "Pages"
+  - name: 'pages'
+    label: 'Pages'
+    editor:
+      preview: false
     files:
-
-      - label: "About Page"
-        name: "about"
-        file: "source/about/index.md"
+      - label: 'About Page'
+        name: 'about'
+        file: 'source/about/index.md'
         fields:
-          - {label: Title, name: title, widget: string}
-          - {label: Intro, name: intro, widget: markdown}
+          - {label: 'Title', name: 'title', widget: 'string'}
+          - {label: 'Overview', name: 'teaser', hint: 'Will be displayed as a larger text', widget: 'text'}
           - label: Team
             name: team
             widget: list
