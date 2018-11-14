@@ -4,8 +4,12 @@ backend:
 
 display_url: https://your-site.com
 logo_url: https://your-site.com/images/logo.svg
-media_folder: 'source/images'
 public_folder: '/images'
+media_folder: 'source/images'
+media_library:
+  name: uploadcare
+  config:
+    publicKey: 9f0b2b6f1d82d63f1332
 
 collections:
   - name: 'posts'
