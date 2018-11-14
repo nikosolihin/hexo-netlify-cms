@@ -6,4 +6,7 @@ header.container
 
   nav.menu(role='navigation')
     each url, label in theme.menu
-      a.menu__link.bold(href=url)= label
+      a.menu__link.bold(
+        href=url
+        class=(is_current(url) ? 'menu__link--active' : false)
+      )= label
