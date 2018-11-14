@@ -12,22 +12,6 @@ media_library:
     publicKey: 9f0b2b6f1d82d63f1332
 
 collections:
-  - name: 'posts'
-    label: 'Posts'
-    label_singular: 'Post'
-    description: The description is a great place for tone setting, high level information, and editing guidelines that are specific to a collection.
-    folder: 'source/_posts'
-    editor:
-      preview: false
-    create: true
-    slug: '{{year}}-{{month}}-{{day}}-{{slug}}'
-    fields:
-      - {label: 'Title', name: 'title', widget: 'string'}
-      - {label: 'Publish Date', name: 'date', widget: 'datetime'}
-      - {label: 'Cover Image', name: 'image', widget: 'image', required: false}
-      - {label: 'Language', name: 'language', widget: 'select', options: ['en', 'fr']}
-      - {label: 'Body', name: 'body', widget: 'markdown'}
-
   - name: 'pages'
     label: 'Pages'
     editor:
@@ -46,3 +30,19 @@ collections:
               - {label: Name, name: name, widget: string}
               - {label: Position, name: position, widget: string}
               - {label: Photo, name: photo, widget: image}
+  
+  # - name: 'posts'
+  #   label: 'Posts'
+  #   label_singular: 'Post'
+  #   description: The description is a great place for tone setting, high level information, and editing guidelines that are specific to a collection.
+  #   folder: 'source/_posts'
+  #   editor:
+  #     preview: false
+  #   create: true
+  #   slug: '{{year}}-{{month}}-{{day}}-{{slug}}'
+  #   fields:
+  #     - {label: 'Title', name: 'title', widget: 'string'}
+  #     - {label: 'Publish Date', name: 'date', widget: 'datetime'}
+  #     - {label: 'Cover Image', name: 'image', widget: 'image', required: false}
+  #     - {label: 'Language', name: 'language', widget: 'select', options: ['en', 'fr']}
+  #     - {label: 'Body', name: 'body', widget: 'markdown'}

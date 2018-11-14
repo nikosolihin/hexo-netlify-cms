@@ -9,6 +9,8 @@
     "**/node_modules": true,
     "**/package-lock.json": true,
     "**/webpack.config.js": true,
+    "**/source/_posts": true,
+    "**/source/admin": true,
     "**/themes/default/source/dist": true,
   },
   "window.title": "${dirty} ${activeEditorMedium}${separator}${rootName}",
