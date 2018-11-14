@@ -1,0 +1,9 @@
+include icon
+
+header.container
+  a.logo(href=config.root)
+    +icon('logo')
+
+  nav.menu(role='navigation')
+    each url, label in theme.menu
+      a.menu__link.bold(href=url)= label

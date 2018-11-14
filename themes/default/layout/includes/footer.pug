@@ -1,0 +1,14 @@
+footer.container
+  span.h6.faint Copyright  ©  #{new Date().getFullYear()}
+
+script.
+  if (window.netlifyIdentity) {
+    window.netlifyIdentity.on('init', user => {
+      if (!user) {
+        window.netlifyIdentity.on('login', () => {
+          document.location.href = '/admin/';
+        });
+      }
+    });
+  }
+script(src='/dist/bundle.js') 

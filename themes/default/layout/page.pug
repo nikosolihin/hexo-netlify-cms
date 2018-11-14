@@ -1,8 +1,14 @@
-extends includes/layout.pug
+extends includes/layout
 
 block content
-  article#page
+  .container
     h1= page.title
-    != page.content
-  div!= paginator()
+    p #{title}. Enter your name
 
+    form.form(action='post')
+      input(
+        type='text'
+        name='name'
+        placeholder='Bob Marley'
+      )
+      button.button(type='submit') Submit

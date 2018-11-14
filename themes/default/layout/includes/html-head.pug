@@ -1,0 +1,15 @@
+- const title = page.title || config.subtitle || ''
+
+doctype html
+html(lang=config.language)
+  head
+    meta(charset="utf-8")
+    meta(name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no")
+    meta(http-equiv="X-UA-Compatible" content="ie=edge")
+    meta(http-equiv="Content-Type" content="text/html; charset=UTF-8")
+    link(rel='stylesheet', href='/dist/style.css')
+    title= `${title} | ${config.name}`
+    
+    script(src='https://identity.netlify.com/v1/netlify-identity-widget.js')
+
+    include ../includes/favicons

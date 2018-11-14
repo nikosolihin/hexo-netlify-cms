@@ -1,7 +1,6 @@
-extends includes/layout.pug
+extends layout
 
 block content
   article#post
     h1= page.title
     != page.content
-  div!= paginator()

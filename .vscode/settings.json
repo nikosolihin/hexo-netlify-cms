@@ -8,6 +8,8 @@
     "**/.gitignore": true,
     "**/node_modules": true,
     "**/package-lock.json": true,
+    "**/webpack.config.js": true,
+    "**/themes/default/source/dist": true,
   },
   "window.title": "${dirty} ${activeEditorMedium}${separator}${rootName}",
   "editor.formatOnPaste": false,
