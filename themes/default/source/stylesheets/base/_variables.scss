@@ -26,18 +26,19 @@ $grid-breakpoints: (xs: 0, sm: 544px, md: 768px, lg: 992px, xl: 1200px, xxl: 140
 $image-breakpoints: (xs: 576, sm: 800, md: 1024, lg: 1280, xl: 1440, xxl: 1600) !default;
 $desktop: 'md' !default;
 $container-width: 1400px !default;
+$container-text-width: 800px !default;
 
 /******************************
  * Typography
  ******************************/
-$font-size-root: 18px !default;
+$font-size-root: 20px !default;
 $font-size: 1rem !default;
 
 // Weights
-$font-weight-light: 300 !default;
+$font-weight-light: 100 !default;
 $font-weight-normal: 300 !default;
 $font-weight-medium: 600 !default;
-$font-weight-bold: 700 !default;
+$font-weight-bold: 800 !default;
 
 // Sizes
 $font-size-h1: 2.074rem !default;
@@ -49,11 +50,12 @@ $font-size-small: .833rem !default;
 $font-size-micro: .694rem !default;
 
 // Line Heights
-$line-height: 1.45 !default;
+$line-height: 1.65 !default;
 $headings-line-height: 1.25 !default;
 
 // Sans Serif
-$font-family: Nunito,
+$font-family: "Proxima Nova",
+"Helvetica Neue",
 Helvetica,
 Arial,
 "Liberation Sans",
